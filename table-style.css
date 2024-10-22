@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #E3F2FD;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+th {
+    background-color: #afa24c;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #c4d7ff;
+}
+
+td {
+    text-align: center;
+}
+
+.separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#filterButtons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filterButtons button {
+    margin: 5px;
+    padding: 13px;
+    font-size: 16px;
+    background-color: #5372F0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 120px; /* Make buttons flexible */
+}
+
+#filterButtons button:hover {
+    background-color: #4d6be6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Reduce font size for smaller devices */
+    }
+
+    #filterButtons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    #filterButtons button {
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Smaller title on very small screens */
+    }
+
+    table, th, td {
+        padding: 6px; /* Reduce padding in table */
+    }
+
+    #filterButtons button {
+        padding: 8px; /* Smaller padding for buttons */
+    }
+
+    .chat-body {
+        font-size: 0.9em; /* Adjust chat font size */
+    }
+}
