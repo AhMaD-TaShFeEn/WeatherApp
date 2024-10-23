@@ -257,7 +257,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 
 
 const getWeatherDetails = (cityName, lat, lon) => {
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(WEATHER_API_URL)
         .then(response => response.json())
@@ -334,7 +334,7 @@ const getCityCoordinates = () => {
         alert("Please enter a city name");
         return;
     }
-    const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`;
+    const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`;
     
     fetch(GEOCODING_API_URL)
         .then(response => response.json())
@@ -357,7 +357,7 @@ const getUserCoordinates = () => {
         position => {
             console.log(position);
             const { latitude, longitude } = position.coords; //Get coordinates of user location
-            const REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+            const REVERSE_GEOCODING_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
             
             // Get city Name from the acquired coordinates using reverse geocoding api
             fetch(REVERSE_GEOCODING_URL)
